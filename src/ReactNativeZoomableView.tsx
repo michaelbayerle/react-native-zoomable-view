@@ -987,6 +987,23 @@ class ReactNativeZoomableView extends Component<
 
     return this._setNewOffsetPosition(-offsetX, -offsetY);
   }
+  
+  /**
+   * Moves the zoomed view to a specified position
+   * Returns a promise when finished
+   *
+   * @param {number} newOffsetX the new position we want to move it to (x-axis)
+   * @param {number} newOffsetY the new position we want to move it to (y-axis)
+   *
+   * @return {Promise<bool>}
+   */
+  moveToCentered(newOffsetX: number, newOffsetY: number): Promise<void> {
+
+    const offsetX = newOffsetX;
+    const offsetY = newOffsetY;
+
+    return this._setNewOffsetPosition(-offsetX, -offsetY);
+  }
 
   /**
    * Moves the zoomed view by a certain amount.
