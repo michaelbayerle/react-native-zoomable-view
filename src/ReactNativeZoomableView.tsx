@@ -982,6 +982,8 @@ class ReactNativeZoomableView extends Component<
   moveTo(newOffsetX: number, newOffsetY: number): Promise<void> {
     const { originalWidth, originalHeight } = this.state;
 
+    throw new Error('Not implemented yet');
+
     const offsetX = (newOffsetX );
     const offsetY = (newOffsetY );
 
